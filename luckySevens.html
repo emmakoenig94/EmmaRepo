@@ -1,0 +1,76 @@
+<!--
+Name: Emma Koenig
+Date Created: 10/22/18
+Most recent revision: 10/23/18
+
+Need to align results table to center and make 
+starting bet box smaller. Also recheck js to see if 
+it could be more concise
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/JavaScript" src="luckySevens.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        rel="stylesheet" type="text/css" />
+		
+		
+<style>
+body {
+text-align: center;
+}
+
+</style>
+
+	<title>Lucky Sevens</title>
+</head>
+<body>
+<div class="container">
+    <h1>Lucky Sevens</h1>
+	<form name="luckySevens" onsubmit = "return play();" 
+	class="form-inline">
+	
+	 <div class="form-group">
+         <label for="strtBet">Starting Bet:</label>
+         <input type="number" step="0.01" class="form-control" id="strtBet"
+		 placeholder="$0.00" required>
+	</div> <br /> <br />
+	
+	<button type="submit" id="submitButton" 
+	class="btn btn-default">Play</button>
+
+	</form>
+	
+<hr />
+
+	<table id="results" class="table table-striped" style="display:none;">
+	<thead>
+		<caption><h2>Results</h2></caption>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Starting Bet</td>
+			<td><span id="initialBet"></span></td>
+		</tr>
+		<tr>
+			<td>Total Rolls Before Going Broke</td>
+			<td><span id="totalRolls"></span></td>
+		</tr>
+		<tr>
+			<td>Highest Amount Won</td>
+			<td><span id="amountWon"></span></td>
+		</tr>
+		<tr>
+			<td>Roll Count at Highest Amount Won</td>
+			<td><span id="rollsAtMax"></span></td>
+		</tr>
+	</tbody>
+</table>
+
+</body>
+
+</div>
+
+</html>
