@@ -9,12 +9,51 @@ Most recent revision:
 <html lang="en">
 
 <head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 <title>Menu</title>
+
+
+<!-- Bootstrap CDN copied from 
+https://www.bootstrapcdn.com/ -->
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 <style>
 
 body{
 background-color:#d283b9;
+}
+
+nav {
+	background-color:#bc8f8f;
+	border-top: 3px dashed #546a7b;
+	border-bottom: 3px dashed #546a7b;
+	margin-top: 5px;
+	margin-bottom:5px;
+}
+
+nav a {
+	background-color:#5b7d87;
+	color: #fef9ff;
+	padding: 8px;
+	text-align: center;
+	text-decoration:none;
+	display: block;
+	margin: 10px;
+	width: 100px;
+}
+
+nav a:hover {
+	font-weight:bold;
+}
+
+
+nav a:visited {
+	color:#e4c3ad;
 }
 
 table, th, td{
@@ -32,6 +71,7 @@ height: 30px;
 }
 
 caption{
+caption-side:top;
 background-color: #546a7b;
 color: #f2eded;
 padding: 0;
@@ -53,6 +93,10 @@ font-size:1.5em;
 <link href="https://fonts.googleapis.com/css?family=Mali" 
 rel="stylesheet">
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" 
+integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" 
+crossorigin="anonymous">
+
 <!-- Use https://fonts.google.com/ to find fonts--->
 
 <link href="restaurantstyles.css" rel="stylesheet"
@@ -62,16 +106,19 @@ type="text/css"/>
 
 <body>
 
+<div class="container">
+
 <header>
 <h1>Family Fusion</h1>
 </header>
 
+
+
 <nav>
 
-<p><a href="Restaurant.html"target="_blank">Home</a></p>
-<p><a href="Menu.html"target="_blank">Menu</a></p>
-<p><a href="ContactUs.html"target="_blank">Contact Us</a></p>
-<div class="clear-float"></div>
+<a class="btn badge-pill; fas fa-home" href="Restaurant.html"target="_blank"></a>
+<a class="btn badge-pill" href="Menu.html"target="_blank">Menu</a>
+<a class="btn badge-pill" href="ContactUs.html"target="_blank">Contact Us</a>
 
 </nav>
 
@@ -79,6 +126,8 @@ type="text/css"/>
 Not sure how to format this, so will finish later
 -->
 
+<div class="row">
+	<div class="col-sm-6">
 <p><h2>Sushi Burrito</h2>
 A classic sushi roll with a twist! Available as
 California Roll, Avacado and Carrot, or Tuna.<br />
@@ -91,22 +140,24 @@ $9.50</p>
 
 <p><h2>Pad Thai Taco</h2>
 Instead of rice noodles, try our pad thai with a flour tortilla
-or crunch corn taco shell. Topped with lime wedges and roasted
+or crunchy corn taco shell. Topped with lime wedges and roasted
 peanuts. <br />
 $7.95</p>
-
+	</div>
+	
+<div class="col-sm-6">
 <p><h2>California Croissant</h2>
 Flaky croissant pastry filled with salmon, 
-wasabi and ginger<br />
+wasabi and ginger.</br>
 $9.95</p>
 
 <p><h2>Falafel Cobb Salad</h2>
 Falafel, feta, tomatoes, hard-boiled eggs, and a creamy
 cucumber dressing. <br />
-$8.95 </p>
+$8.95</p>
+</div>
 
-
-
+</div> <!--closes row div -->
 
 
 
@@ -147,5 +198,15 @@ $8.95 </p>
 	<p>4464 E Burnside, Portland, OR </p>
 	<p> (503)-214-8876
 </footer>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<noscript>Your browser does not support JavaScript. This site is best
+ viewed with JavaScript enabled.</noscript>
+ 
 </body>
 </html>

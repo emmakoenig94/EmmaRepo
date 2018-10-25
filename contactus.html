@@ -9,13 +9,43 @@ Most recent revision:
 <html lang="en">
 
 <head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 <title>Contact Us</title>
 
+<!-- Bootstrap CDN copied from 
+https://www.bootstrapcdn.com/ -->
+
+ 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+		
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		
+		
 <link href="https://fonts.googleapis.com/css?family=Mali" 
 rel="stylesheet">
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" 
+integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" 
+crossorigin="anonymous">
+
 <link href="restaurantstyles.css" rel="stylesheet"
 type="text/css"/>
+
+<script>
+$(document).ready(function(){
+	$("form").submit(function(){
+		alert("Thank you! Your information was successfuly submitted.");
+		});
+	});
+</script>
+
 
 <style>
 
@@ -23,45 +53,78 @@ body{
 background-color: #bebeea;
 }
 
+nav {
+	background-color:#bc8f8f;
+	border-top: 3px dashed #546a7b;
+	border-bottom: 3px dashed #546a7b;
+	margin-top: 5px;
+	margin-bottom:5px;
+}
+
+nav a {
+	background-color:#5b7d87;
+	color: #fef9ff;
+	padding: 8px;
+	text-align: center;
+	text-decoration:none;
+	display: block;
+	margin: 10px;
+	width: 100px;
+}
+
+nav a:hover {
+	font-weight:bold;
+}
 
 
-</style>
+nav a:visited {
+	color:#e4c3ad;
+}
+
+</style> 
 
 
 </head>
 
 <body>
 
+<div class= "container">
+
 <header>
 <h1>Family Fusion</h1>
 </header>
 
 <nav>
-
-<p><a href="Restaurant.html"target="_blank">Home</a></p>
-<p><a href="Menu.html"target="_blank">Menu</a></p>
-<p><a href="ContactUs.html"target="_blank">Contact Us</a></p>
-<div class="clear-float"></div>
-
+	<a class="btn badge-pill; fas fa-home" href="Restaurant.html"target="_blank"></a>
+	<a class="btn badge-pill" href="Menu.html"target="_blank">Menu</a>
+	<a class="btn badge-pill" href="ContactUs.html"target="_blank">Contact Us</a>
 </nav>
 
-<form action="submit.html"
-method="POST">
 
-<label for="Name">Name:
-</label>
-<input type="text" id="Email"<br />
-<br /> <br />
+<form action="" method="POST">
+<!--Required fields are bold-->
+<div class="form-group">
+	<label for="name" style="font-weight:bold">Name:</label>
+	<input type="text" id="name" required><br />
+	<br />
 
-<label for="Email">Email:
-</label>
-<input type="text" id="Email"<br />
-<br /> <br />
+</div>
 
-<label for="phone">Phone:
+<div class="form-group">
+<label for="Email" style="font-weight:bold">Email:
 </label>
-<input type="text" id="phone"<br /> 
-<br /> <br />
+<input type="email" id="Email" required><br />
+<br />
+
+</div>
+
+<div class="form-group">
+<label for="phone" style="font-weight:bold">Phone:
+</label>
+<input type="phone number" id="phone"><br /> 
+<br />
+
+</div>
 
 <label for="reason">Reason for Inquiry:</label>
 <select id="reason" name="reason">
@@ -71,10 +134,11 @@ method="POST">
 <option value="other">Other</option>
 </select><br /> <br />
 
-<label for="info">Additional Information:</label>
+<div>
+<label for="info">Additional Information:</label> 
 <textarea id="info" name="info"> </textarea>
 <br /><br />
-
+</div>
 
 <label for="question">Have you been to Family Fusion?</label> 
 <input type="radio" id="choice1" name="question"
@@ -96,9 +160,10 @@ value="no"><label for="choice2">No</label>
 <label for ="f">F</label>
 
 <br /><br />
-<input type="submit" name="submit" value="Submit Request">
+<button type="submit" id="submitButton" 
+class="btn btn-default">Submit Request</button>
 
-
+</form>
 
 
 
@@ -112,5 +177,15 @@ value="no"><label for="choice2">No</label>
 	<p> (503)-214-8876
 
 </footer>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+ <noscript>Your browser does not support JavaScript. This site is best
+ viewed with JavaScript enabled.</noscript>
+
 </body>
 </html>
