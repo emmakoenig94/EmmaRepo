@@ -16,20 +16,26 @@ it could be more concise
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         rel="stylesheet" type="text/css" />
 		
-		
+<title>Lucky Sevens</title>
+
 <style>
 body {
 text-align: center;
 }
 
-</style>
+td{
+  border: 1px solid black;
+}
 
-	<title>Lucky Sevens</title>
+
+</style
+
 </head>
 <body>
 <div class="container">
     <h1>Lucky Sevens</h1>
-	<form name="luckySevens" onsubmit = "return play();" 
+	<br />
+	<form name="luckySevens"  onsubmit = "return play()" 
 	class="form-inline">
 	
 	 <div class="form-group">
@@ -45,29 +51,31 @@ text-align: center;
 	
 <hr />
 
+
 	<table id="results" class="table table-striped" style="display:none;">
 	<thead>
-		<caption><h2>Results</h2></caption>
+		<caption><h2 class="text-center">Results</h2></caption>
 	</thead>
 	<tbody>
 		<tr>
-			<td>Starting Bet</td>
+			<td align=left>Starting Bet</td>
 			<td><span id="initialBet"></span></td>
 		</tr>
 		<tr>
-			<td>Total Rolls Before Going Broke</td>
-			<td><span id="totalRolls"></span></td>
+			<td align=left>Total Rolls Before Going Broke</td>
+			<td align=left><span id="totalRolls"></span></td>
 		</tr>
 		<tr>
-			<td>Highest Amount Won</td>
+			<td align=left>Highest Amount Won</td>
 			<td><span id="amountWon"></span></td>
 		</tr>
 		<tr>
-			<td>Roll Count at Highest Amount Won</td>
+			<td align=left>Roll Count at Highest Amount Won</td>
 			<td><span id="rollsAtMax"></span></td>
 		</tr>
 	</tbody>
 </table>
+
 
 </body>
 

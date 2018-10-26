@@ -1,10 +1,11 @@
 /*
 Name: Emma Koenig
 Date Created: 10/22/18
-Most recent revision: 10/23/18
+Most recent revision: 10/25/18
 */
 
-
+//*Site crashes if bet is too large, 	
+	
 function play() {
 	var startBet = Number(document.forms["luckySevens"]["strtBet"].value);
 	if (startBet <= 0) {
@@ -15,10 +16,12 @@ function play() {
 	 //Makes user put in starting bet >0
 	}
 	
+	
+	
 	//Defining Variables
 	var gameMoney = startBet; 
 	var moneyArray = [gameMoney];  //put gameMoney in array so it can be tracked
-	var counterAll = 0;     //counts every roll, starts at 0
+	var counterAll = 0;     //counterALL counts every roll, starts at 0
 
 //starting loop	
 if (startBet > 0){
@@ -29,8 +32,8 @@ if (startBet > 0){
 		var die2=Math.floor((Math.random() * 6) + 1);
 		var diceSum = (die1 + die2);
 		
-	if (diceSum == 7) {			//wins +4 if dice add to 7
-		gameMoney = gameMoney + 4;
+	if (diceSum == 7) {			
+		gameMoney = gameMoney + 4;  //wins +4 if dice add to 7
 		moneyArray[moneyArray.length]= gameMoney; //adds money to array
 	
 	}else{
@@ -51,7 +54,7 @@ if (startBet > 0){
 	//table 
    document.getElementById("results").style.display = "block";
    document.getElementById("submitButton").innerText = "Play Again"; //play again button
-   document.getElementById("initialBet").innerText =("$" + startBet.toFixed(2));
+   document.getElementById("initialBet").innerText =("$" + startBet.toFixed(2)); //.toFixed shows two decimal points
    document.getElementById("totalRolls").innerText = counterAll;
    document.getElementById("amountWon").innerText = ("$" + maxMoney.toFixed(2));
    document.getElementById("rollsAtMax").innerText = counterMax; 
